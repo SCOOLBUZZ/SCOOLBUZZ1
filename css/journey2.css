@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Poppins', sans-serif;
+}
+
+.top-container {
+  text-align: center;
+  background-color: #6096cc;
+  color: white;
+  font-size: 25px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  padding-top: 40px;
+}
+
+/*main*/
+.timeline-section{
+	background-color: #6096cc;
+	min-height: 100vh;
+	padding: 70px 15px;
+}
+.timeline-items{
+	max-width: 1000px;
+	margin:auto;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+}
+.timeline-items::before{
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: 100%;
+	background-color: #ffffff34;
+	left: calc(50% - 1px);
+}
+.timeline-item{
+	margin-bottom: 40px;
+	width: 100%;
+	position: relative;
+}
+.timeline-item:last-child{
+	margin-bottom: 0;
+}
+.timeline-item:nth-child(odd){
+  padding-right: calc(50% + 30px);
+	text-align: right;
+}
+.timeline-item:nth-child(even){
+    padding-left: calc(50% + 30px);
+}
+.timeline-dot{
+	height: 16px;
+	width: 16px;
+	background-color: white;
+	position: absolute;
+	left: calc(50% - 8px);
+	border-radius: 50%;
+	top:10px;
+}
+.timeline-date{
+	font-size: 18px;
+	color: white;
+	margin:6px 0 15px;
+}
+.timeline-content{
+    background-color: #ffffff34;
+	padding: 30px;
+	border-radius: 5px;
+}
+.timeline-content h3{
+    font-size: 22px;
+	color: #ffffff;
+	margin:0 0 10px;
+	text-transform: capitalize;
+	font-weight: 500;
+}
+.timeline-content p{
+    color: white;
+	font-size: 13px;
+	font-weight: 300;
+	line-height: 22px;
+}
+a {
+  color: #ffffff;
+}
+a:hover {
+  color: #6096cc;
+}
+#back{
+  text-decoration: none;
+}
+
+/* footer*/
+footer {
+  padding: 20px;
+  color: white;
+  text-align: center;
+  font-size: 13px;
+  background-color: #6096cc;
+}
+/* Style all font awesome icons */
+.fa {
+  margin-bottom: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Google */
+.fa-google {
+  color: white;
+}
+
+/* FB */
+.fa-facebook {
+  color: white;
+}
+ /* YT */
+ .fa-youtube {
+  color:white;
+}
+
+/* responsive */
+@media(max-width: 767px){
+	.timeline-items::before{
+		left: 7px;
+	}
+	.timeline-item:nth-child(odd){
+		padding-right: 0;
+		text-align: left;
+	}
+	.timeline-item:nth-child(odd),
+	.timeline-item:nth-child(even){
+		padding-left: 37px;
+	}
+	.timeline-dot{
+		left:0;
+	}
+}
